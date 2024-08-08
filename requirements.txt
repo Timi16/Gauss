@@ -4,3 +4,4 @@ diffusers
 Pillow
 transformers
 accelerate
+gunicorn
