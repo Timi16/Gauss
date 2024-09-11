@@ -49,8 +49,4 @@ def image_to_base64(image):
     image.save(buffered, format="JPEG")
     return base64.b64encode(buffered.getvalue()).decode()
 
-if __name__ == '__main__':
-    from werkzeug.middleware.profiler import ProfilerMiddleware
-    app.wsgi_app = ProfilerMiddleware(app.wsgi_app, profile_dir='/tmp/profiler')
-    app.run(host='0.0.0.0', port=5000)
-        
+# Remove Flask's development server call
